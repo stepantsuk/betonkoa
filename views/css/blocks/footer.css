@@ -1,0 +1,67 @@
+.footer {
+  position: relative;
+  background-color: var(--mainColor10);
+  color: var(--mainColorWhite);
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 20px;
+  padding: 10px 0 10px;
+  margin-top: auto;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer__company-logo {
+  width: 45px;
+  height: 45px;
+}
+
+@media screen and (max-width: 480px) {
+  .footer__company-logo {
+    padding-left: 4px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.footer__left {
+  display: flex;
+}
+
+.footer__text {
+  text-align: center;
+}
+
+.footer__contacts {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+@media screen and (max-width: 480px) {
+  .footer__contacts {
+    gap: 4px;
+  }
+}
+
+.footer__contacts--row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.footer__contacts-title {
+}
+
+.footer__contacts-value {
+  font-weight: 600;
+  letter-spacing: 1px;
+}

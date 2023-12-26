@@ -1,0 +1,146 @@
+.container__catalog {
+  display: flex;
+  flex-grow: 1;
+}
+
+.catalog {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--mainColorBlack);
+}
+
+@media screen and (max-width: 480px) {
+  .catalog {
+    gap: 6px;
+  }
+}
+
+.catalog__left {
+  position: relative;
+  width: 25%;
+  padding: 20px 20px;
+  display: flex;
+  /* flex: 25%; */
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: var(--mainColor03);
+  border-left: 1px solid var(--mainColor10);
+  border-right: 1px solid var(--mainColor10);
+}
+
+@media screen and (max-width: 768px) {
+  .catalog__left {
+    padding: 12px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .catalog__left {
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .catalog__left {
+    max-width: 30%;
+    padding: 0 4px 4px 4px;
+  }
+}
+
+.category__title {
+  font-size: 1.143rem;
+  border-bottom: 2px solid var(--mainColor10);
+  padding: 4px 0px 4px 4px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.category__list {
+  position: sticky;
+  top: 102px;
+  /* padding: 8px 0; */
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+@media screen and (max-width: 768px) {
+  .category__list {
+    top: 90px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .category__list {
+    top: 56px;
+    gap: 0px;
+  }
+}
+
+.category__item {
+  /* height: 32px; */
+  padding: 4px 0px 4px 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-bottom: 1px solid var(--mainColor10);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 480px) {
+  .category__item {
+    top: 64px;
+  }
+}
+
+.category__item--active {
+  border-bottom: 1px solid var(--accentColor01);
+}
+
+.category__item:hover {
+  border-bottom: 1px solid var(--accentColor01);
+}
+
+.catalog__right {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  /* flex: 75%; */
+  flex-grow: 0;
+  gap: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .catalog__right {
+    padding: 8px 0;
+    gap: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .catalog__right {
+    gap: 4px;
+  }
+}
+
+.catalog__title {
+  font-size: 1.571rem;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 480px) {
+  .catalog__title {
+    font-size: 1.429rem;
+  }
+}
+
+.card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}

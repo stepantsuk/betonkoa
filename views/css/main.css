@@ -1,0 +1,10 @@
+@import url(./layout/normalize.css);
+@import url(./layout/fonts.css);
+@import url(./layout/base.css);
+@import url(./layout/customScroll.css);
+
+@import url(./blocks/header.css);
+@import url(./blocks/catalog.css);
+@import url(./blocks/catatlogitem.css);
+@import url(./blocks/contacts.css);
+@import url(./blocks/footer.css);

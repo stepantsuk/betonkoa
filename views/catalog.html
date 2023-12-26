@@ -1,0 +1,128 @@
+<div class="wrapper">
+  <header class="header">
+    <div class="container">
+      <div class="header__frame">
+        <div class="header__left">
+          <a href="./">
+            <div class="company-name">теплоэнергосервис</div>
+          </a>
+          <a href="./">
+            <div class="company-logo"></div>
+          </a>
+        </div>
+        <nav>
+          <ul class="nav">
+            <li class="nav__item nav__item--active">
+              <a href="./">каталог</a>
+            </li>
+            <li class="nav__item">
+              <a href="./contacts">контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div class="wrapper__content">
+    <div class="container container__catalog">
+      <div class="catalog">
+        <div class="catalog__left">
+          <!-- <h3 class="category__title">Разделы</h3> -->
+          <ul class="category__list">
+            <% categories.forEach((category) => {%>
+            <a href="<%= category.linkCatalog %>">
+              <li
+                class="category__item <%= category.titleCategory === catalog.titleCategory ? 'category__item--active' : ''%>"
+              >
+                <%= category.titleCategory %>
+              </li>
+            </a>
+            <% })%>
+          </ul>
+        </div>
+        <div class="catalog__right">
+          <% if(catalog.titleCategory){ %>
+          <h2 class="catalog__title"><%= catalog.titleCategory %></h2>
+          <% } %>
+          <ul class="card__list">
+            <% catalog.cards.forEach((card) => {%>
+            <li class="card__frame">
+              <div class="card__img-frame">
+                <img
+                  class="card__img"
+                  src="<%= card.imgSource ? card.imgSource : './assets/noPhoto.png' %>"
+                  alt="фото товара"
+                />
+              </div>
+              <div class="card__content">
+                <% if(card.cardTitle) {%>
+                <div class="card__title"><%= card.cardTitle %></div>
+                <% }%>
+                <% if(card.cardArticle) {%>
+                <div class="card__article" id="article">
+                  <div class="card__article-title">Артикул:</div>
+                  <div class="card__article-value"><%= card.cardArticle %></div>
+                </div>
+                <% }%>
+                <% if(card.producer) {%>
+                <div class="card__article" id="producer">
+                  <div class="card__article-title">Производитель:</div>
+                  <div class="card__article-value"><%= card.producer %></div>
+                </div>
+                <% }%>
+                <% if(card.resource) {%>
+                <div class="card__article" id="resource">
+                  <div class="card__article-title">Ресурс:</div>
+                  <div class="article__frame">
+                    <div class="card__article-value"><%= card.resource %></div>
+                    <% if(card.resourceMeasure) {%>
+                    <div class="card__article-value">
+                      <%= card.resourceMeasure %>
+                    </div>
+                    <% }%>
+                  </div>
+                </div>
+                <% }%>
+                <% if(card.description) {%>
+                <div class="card__description">
+                  <p><%= card.description %></p>
+                </div>
+                <% }%>
+                <div class="article__frame article__price">
+                  <div class="card__article-title article-title--price">
+                    Цена:
+                  </div>
+                  <% if(card.price) {%>
+                  <div class="article__frame">
+                    <div class="card__article-value"><%= new Intl.NumberFormat('ru-RU').format(card.price) %></div>
+                    <div class="card__article-value">₽</div>
+                  </div>
+                  <% } else {%>
+                  <div class="card__article-value">По запросу</div>
+                  <% } %>
+                </div>
+              </div>
+            </li>
+            <% })%>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <div class="footer__container">
+        <a href="./">
+          <div class="company-logo footer__company-logo"></div>
+        </a>
+        <div class="footer__text">Приглашаем к сотрудничеству!</div>
+        <div class="footer__contacts">
+          <a href="tel:+79995552277">
+            <div class="footer__contacts-value">+7 (4712) 730-799</div>
+          </a>
+          <div class="footer__contacts-value">gktes@mail.ru</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
